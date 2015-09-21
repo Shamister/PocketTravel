@@ -1,0 +1,8 @@
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\bin\Debug\PocketTravelTest.exe.config
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\bin\Debug\PocketTravelTest.exe
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\bin\Debug\PocketTravelTest.pdb
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\obj\Debug\PocketTravelTest.csprojResolveAssemblyReference.cache
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\obj\Debug\PocketTravelTest.exe
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\obj\Debug\PocketTravelTest.pdb
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\bin\Debug\Newtonsoft.Json.dll
+c:\users\revauthore\documents\visual studio 2015\Projects\PocketTravel\PocketTravelTest\bin\Debug\Newtonsoft.Json.xml

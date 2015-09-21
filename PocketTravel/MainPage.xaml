@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="PocketTravel.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PocketTravel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="state" Grid.Column="1" Text="Loading..." FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
+            <Viewbox Grid.Row="1" Grid.ColumnSpan="4">
+                <TextBlock x:Name="title" Text="Pocket Travel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Viewbox>
+            <TextBlock x:Name="origin" Grid.Row="3" Grid.Column="1" Text="Origin" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <AutoSuggestBox x:Name="OriginTextBox" Grid.Row="3" Grid.Column="2" TextChanged="OriginTextBox_TextChanged"/>
+            <TextBlock x:Name="destination" Grid.Row="4" Grid.Column="1" Text="Destination" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <AutoSuggestBox x:Name="DestinationTextBox" Grid.Row="4" Grid.Column="2" TextChanged="DestinationTextBox_TextChanged"/>
+            <Button x:Name="button" Grid.Row="5" Grid.Column="1" Content="Search!" Click="button_Click" HorizontalAlignment="Left"/>
+
+            <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="cityText" Grid.Row="1" Text="City"/>
+                <TextBlock x:Name="countryText" Grid.Row="2" Text="Country"/>
+                <TextBlock x:Name="coordinateText" Grid.Row="3" Text="Coordinate"/>
+                <TextBlock x:Name="timezoneText" Grid.Row="4" Text="Timezone"/>
+                <TextBlock x:Name="originTimeText" Grid.Row="5" Text="Time in Your Place"/>
+                <TextBlock x:Name="destTimeText" Grid.Row="6" Text="Time in Destination"/>
+                <TextBlock x:Name="weatherText" Grid.Row="7" Text="Weather"/>
+                <TextBlock x:Name="tempText" Grid.Row="8" Text="Temperature"/>
+
+                <TextBlock x:Name="city" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="country" Grid.Column="1" Grid.Row="2"/>
+                <TextBlock x:Name="coordinate" Grid.Column="1" Grid.Row="3"/>
+                <TextBlock x:Name="timezone" Grid.Column="1" Grid.Row="4"/>
+                <TextBlock x:Name="originTime" Grid.Column="1" Grid.Row="5" FontSize="12"/>
+                <TextBlock x:Name="destTime" Grid.Column="1" Grid.Row="6" FontSize="12"/>
+                <TextBlock x:Name="weather" Grid.Column="1" Grid.Row="7"/>
+                <TextBlock x:Name="temp" Grid.Column="1" Grid.Row="8"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="loadingGrid" Background="#FFFF7417">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="movingOutTrans" X="0"/>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="image" Grid.Column="1" Grid.Row="1" Source="Assets/logo.png"/>
+            <Viewbox Grid.Column="1" Grid.Row="2" Stretch="Uniform" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="loadingTitle" Text="PocketTravel" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="21.333" FontFamily="Comic Sans MS"/>
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="4" Stretch="Uniform" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="loadingState" Text="State" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>
